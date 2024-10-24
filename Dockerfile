@@ -22,6 +22,9 @@ RUN java -Xmx3072M -Xms3072M -jar server.jar --installServer
 #サーバ実行のための準備
 RUN echo eula=true > eula.txt
 
+#ポート開放
+EXPOSE 25565
+
 #VCRワールドの導入
 RUN mkdir ./world/
 WORKDIR /srv/minecraft/world/
